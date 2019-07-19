@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="js/jquery-1.8.3.js"></script>
+    <script language="JavaScript">
+
+    </script>
+</head>
+<body>
+<form action="/addDistrict" method="post">
+<table id="table1">
+    <tr>
+        <td>区域的编号</td>
+        <td>区域名称</td>
+    </tr>
+    <tr>
+        <td><input type="text" name="id"></td>
+        <td><input type="text" name="name"></td>
+    </tr>
+</table>
+    <input type="submit" value="提交">
+</form>
+<p th:text="${info}"></p>
+</body>
+</html>
