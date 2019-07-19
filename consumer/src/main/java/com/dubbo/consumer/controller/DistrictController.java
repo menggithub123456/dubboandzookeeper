@@ -28,4 +28,20 @@ public class DistrictController {
         model.addAttribute("list",list);
         return "index";
     }
+    @RequestMapping("add")
+    public String add(){
+        return "insert";
+    }
+    @RequestMapping("addDistrict")
+    public String addDistrict(District district,Model model){
+        int i = districtService.addDistrict(district);
+        if (i>0){
+            model.addAttribute("info","添加成功");
+            return "insert";
+        }else {
+            model.addAttribute("info","添加失败");
+            return "insert";
+        }
+
+    }
 }
