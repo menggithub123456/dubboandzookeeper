@@ -22,4 +22,14 @@ public class DistrictServiceImpl implements DistrictService {
     public List<District> getAllDistrict() {
         return districtMapper.selectByExample(null);
     }
+
+    @Override
+    public int addDistrict(District district) {
+        return districtMapper.insertSelective(district);
+    }
+
+    @Override
+    public int delDistrict(Integer id) {
+        return districtMapper.deleteByPrimaryKey(id);
+    }
 }
